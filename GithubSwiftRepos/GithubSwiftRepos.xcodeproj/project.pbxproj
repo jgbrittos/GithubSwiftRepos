@@ -19,6 +19,7 @@
 		456F37CD233EC5160047FD18 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37CC233EC5160047FD18 /* Repo.swift */; };
 		456F37CF233EC5710047FD18 /* RepoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37CE233EC5710047FD18 /* RepoList.swift */; };
 		456F37D1233EC5A60047FD18 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37D0233EC5A60047FD18 /* Owner.swift */; };
+		456F37D4233ECBA00047FD18 /* UIImageView+AsyncLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37D3233ECBA00047FD18 /* UIImageView+AsyncLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		456F37CC233EC5160047FD18 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		456F37CE233EC5710047FD18 /* RepoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoList.swift; sourceTree = "<group>"; };
 		456F37D0233EC5A60047FD18 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		456F37D3233ECBA00047FD18 /* UIImageView+AsyncLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				456F378F233EC06B0047FD18 /* AppDelegate.swift */,
 				456F37C8233EC2B30047FD18 /* RepoListScene */,
 				456F37C0233EC0FA0047FD18 /* ViewComponents */,
+				456F37D2233ECB840047FD18 /* Extensions */,
 				456F37CB233EC50D0047FD18 /* Model */,
 				456F37C5233EC2570047FD18 /* Resources */,
 			);
@@ -170,6 +173,14 @@
 				456F37D0233EC5A60047FD18 /* Owner.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		456F37D2233ECB840047FD18 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				456F37D3233ECBA00047FD18 /* UIImageView+AsyncLoading.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				456F37CD233EC5160047FD18 /* Repo.swift in Sources */,
 				456F37C7233EC2790047FD18 /* RepoListView.swift in Sources */,
 				456F37C4233EC1760047FD18 /* ViewCode.swift in Sources */,
+				456F37D4233ECBA00047FD18 /* UIImageView+AsyncLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +489,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RNV6X3S2UF;
-				INFOPLIST_FILE = GithubSwiftRepos/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GithubSwiftRepos/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,7 +510,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RNV6X3S2UF;
-				INFOPLIST_FILE = GithubSwiftRepos/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GithubSwiftRepos/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
