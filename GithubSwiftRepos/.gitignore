@@ -1,0 +1,15 @@
+# Mac OS X Finder
+.DS_Store
+
+# Private Keys
+*.pem
+
+# Xcode legacy
+*.pbxuser
+
+# Xcode
+xcuserdata/
+project.xcworkspace/
+
+# Pods
+Pods/
