@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		103656C50894EE60658B9ECF /* Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3310A5D9A06571EC31EECC19 /* Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework */; };
 		450A20B323454B560025D8A7 /* JSON+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A20B223454B560025D8A7 /* JSON+Decode.swift */; };
 		450A20B523454B7B0025D8A7 /* mock_page_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 450A20B423454B7B0025D8A7 /* mock_page_1.json */; };
 		456F3790233EC06B0047FD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F378F233EC06B0047FD18 /* AppDelegate.swift */; };
 		456F3799233EC06C0047FD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456F3798233EC06C0047FD18 /* Assets.xcassets */; };
 		456F379C233EC06C0047FD18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456F379A233EC06C0047FD18 /* LaunchScreen.storyboard */; };
 		456F37A7233EC06C0047FD18 /* GithubSwiftReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37A6233EC06C0047FD18 /* GithubSwiftReposTests.swift */; };
-		456F37B2233EC06C0047FD18 /* GithubSwiftReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37B1233EC06C0047FD18 /* GithubSwiftReposUITests.swift */; };
 		456F37C2233EC1530047FD18 /* RepoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37C1233EC1530047FD18 /* RepoItemTableViewCell.swift */; };
 		456F37C4233EC1760047FD18 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37C3233EC1760047FD18 /* ViewCode.swift */; };
 		456F37C7233EC2790047FD18 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F37C6233EC2790047FD18 /* RepoListView.swift */; };
@@ -39,13 +37,6 @@
 			remoteGlobalIDString = 456F378B233EC06B0047FD18;
 			remoteInfo = GithubSwiftRepos;
 		};
-		456F37AE233EC06C0047FD18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 456F3784233EC06B0047FD18 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 456F378B233EC06B0047FD18;
-			remoteInfo = GithubSwiftRepos;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +52,6 @@
 		456F37A2233EC06C0047FD18 /* GithubSwiftReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubSwiftReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456F37A6233EC06C0047FD18 /* GithubSwiftReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSwiftReposTests.swift; sourceTree = "<group>"; };
 		456F37A8233EC06C0047FD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		456F37AD233EC06C0047FD18 /* GithubSwiftReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubSwiftReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		456F37B1233EC06C0047FD18 /* GithubSwiftReposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSwiftReposUITests.swift; sourceTree = "<group>"; };
-		456F37B3233EC06C0047FD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		456F37C1233EC1530047FD18 /* RepoItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItemTableViewCell.swift; sourceTree = "<group>"; };
 		456F37C3233EC1760047FD18 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		456F37C6233EC2790047FD18 /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
@@ -102,14 +90,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		456F37AA233EC06C0047FD18 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				103656C50894EE60658B9ECF /* Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -137,7 +117,6 @@
 			children = (
 				456F378E233EC06B0047FD18 /* GithubSwiftRepos */,
 				456F37A5233EC06C0047FD18 /* GithubSwiftReposTests */,
-				456F37B0233EC06C0047FD18 /* GithubSwiftReposUITests */,
 				456F378D233EC06B0047FD18 /* Products */,
 				9F03309E7BA45B24E5A854A6 /* Pods */,
 				05360F1941590CE06A28A246 /* Frameworks */,
@@ -149,7 +128,6 @@
 			children = (
 				456F378C233EC06B0047FD18 /* GithubSwiftRepos.app */,
 				456F37A2233EC06C0047FD18 /* GithubSwiftReposTests.xctest */,
-				456F37AD233EC06C0047FD18 /* GithubSwiftReposUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,15 +154,6 @@
 				45D98BA023455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift */,
 			);
 			path = GithubSwiftReposTests;
-			sourceTree = "<group>";
-		};
-		456F37B0233EC06C0047FD18 /* GithubSwiftReposUITests */ = {
-			isa = PBXGroup;
-			children = (
-				456F37B1233EC06C0047FD18 /* GithubSwiftReposUITests.swift */,
-				456F37B3233EC06C0047FD18 /* Info.plist */,
-			);
-			path = GithubSwiftReposUITests;
 			sourceTree = "<group>";
 		};
 		456F37C0233EC0FA0047FD18 /* Utils */ = {
@@ -314,26 +283,6 @@
 			productReference = 456F37A2233EC06C0047FD18 /* GithubSwiftReposTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		456F37AC233EC06C0047FD18 /* GithubSwiftReposUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 456F37BC233EC06C0047FD18 /* Build configuration list for PBXNativeTarget "GithubSwiftReposUITests" */;
-			buildPhases = (
-				DA01317F91973DFBB33C3999 /* [CP] Check Pods Manifest.lock */,
-				456F37A9233EC06C0047FD18 /* Sources */,
-				456F37AA233EC06C0047FD18 /* Frameworks */,
-				456F37AB233EC06C0047FD18 /* Resources */,
-				744EA74AA8793E15D3B4FE33 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				456F37AF233EC06C0047FD18 /* PBXTargetDependency */,
-			);
-			name = GithubSwiftReposUITests;
-			productName = GithubSwiftReposUITests;
-			productReference = 456F37AD233EC06C0047FD18 /* GithubSwiftReposUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -348,10 +297,6 @@
 						CreatedOnToolsVersion = 11.0;
 					};
 					456F37A1233EC06C0047FD18 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 456F378B233EC06B0047FD18;
-					};
-					456F37AC233EC06C0047FD18 = {
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 456F378B233EC06B0047FD18;
 					};
@@ -372,7 +317,6 @@
 			targets = (
 				456F378B233EC06B0047FD18 /* GithubSwiftRepos */,
 				456F37A1233EC06C0047FD18 /* GithubSwiftReposTests */,
-				456F37AC233EC06C0047FD18 /* GithubSwiftReposUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -395,55 +339,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		456F37AB233EC06C0047FD18 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		744EA74AA8793E15D3B4FE33 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GithubSwiftRepos-GithubSwiftReposUITests/Pods-GithubSwiftRepos-GithubSwiftReposUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GithubSwiftRepos-GithubSwiftReposUITests/Pods-GithubSwiftRepos-GithubSwiftReposUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubSwiftRepos-GithubSwiftReposUITests/Pods-GithubSwiftRepos-GithubSwiftReposUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DA01317F91973DFBB33C3999 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GithubSwiftRepos-GithubSwiftReposUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EC295BE57D3BFB5B509F7708 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,14 +435,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		456F37A9233EC06C0047FD18 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				456F37B2233EC06C0047FD18 /* GithubSwiftReposUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -552,11 +442,6 @@
 			isa = PBXTargetDependency;
 			target = 456F378B233EC06B0047FD18 /* GithubSwiftRepos */;
 			targetProxy = 456F37A3233EC06C0047FD18 /* PBXContainerItemProxy */;
-		};
-		456F37AF233EC06C0047FD18 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 456F378B233EC06B0047FD18 /* GithubSwiftRepos */;
-			targetProxy = 456F37AE233EC06C0047FD18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -776,48 +661,6 @@
 			};
 			name = Release;
 		};
-		456F37BD233EC06C0047FD18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB36FAB3AA8A433757EA1257 /* Pods-GithubSwiftRepos-GithubSwiftReposUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RNV6X3S2UF;
-				INFOPLIST_FILE = GithubSwiftReposUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jgbrittos.GithubSwiftReposUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GithubSwiftRepos;
-			};
-			name = Debug;
-		};
-		456F37BE233EC06C0047FD18 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA058659627D089FF3C2CC9D /* Pods-GithubSwiftRepos-GithubSwiftReposUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RNV6X3S2UF;
-				INFOPLIST_FILE = GithubSwiftReposUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jgbrittos.GithubSwiftReposUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GithubSwiftRepos;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -844,15 +687,6 @@
 			buildConfigurations = (
 				456F37BA233EC06C0047FD18 /* Debug */,
 				456F37BB233EC06C0047FD18 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		456F37BC233EC06C0047FD18 /* Build configuration list for PBXNativeTarget "GithubSwiftReposUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				456F37BD233EC06C0047FD18 /* Debug */,
-				456F37BE233EC06C0047FD18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

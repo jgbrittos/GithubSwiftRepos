@@ -14,7 +14,7 @@ final class RepoListView: UIView {
     private lazy var refreshControl: UIRefreshControl = {
         let control = UIRefreshControl(frame: .zero)
         control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
-        control.attributedTitle = NSAttributedString(string: "Fetching more repos")
+        control.attributedTitle = NSAttributedString(string: "Refreshing repo list")
         return control
     }()
     private lazy var reposTableView: UITableView = {
