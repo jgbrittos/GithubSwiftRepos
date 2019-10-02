@@ -1,13 +1,14 @@
 import UIKit
 
-protocol RequestManagerProtocol {
-    func fetch<T: Decodable>(from url: String, success: @escaping (T) -> Void, failure: @escaping (Error?) -> Void)
+protocol FetchListRepositoryProtocol {
+    func fetchRepoList(success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void)
 }
 
-struct RequestManager: RequestManagerProtocol {
-    func fetch<T: Decodable>(from url: String, success: @escaping (T) -> Void, failure: @escaping (Error?) -> Void) {
-
-        guard let url = URL(string: url) else { return }
+struct FetchListRepository: FetchListRepositoryProtocol {
+    private let endpoint = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
+    
+    func fetchRepoList(success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void) {
+        guard let url = URL(string: endpoint) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -21,7 +22,7 @@ struct RequestManager: RequestManagerProtocol {
             }
             
             do {
-                let result = try JSONDecoder().decode(T.self, from: data)
+                let result = try JSONDecoder().decode(RepoList.self, from: data)
                 success(result)
             } catch let error {
                 failure(error)

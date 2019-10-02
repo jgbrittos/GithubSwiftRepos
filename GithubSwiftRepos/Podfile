@@ -6,7 +6,8 @@ target 'GithubSwiftRepos' do
   use_frameworks!
 
   # Pods for GithubSwiftRepos
-
+  pod 'UIScrollView-InfiniteScroll', '~> 1.1.0'
+  
   target 'GithubSwiftReposTests' do
     inherit! :search_paths
     # Pods for testing

@@ -1,13 +1,12 @@
 protocol RepoListViewModelDelegate: AnyObject {
     func set(repository: FetchListRepositoryProtocol)
-    
+    func set(view: RepoListViewDelegate)
     func fetchList()
 }
 
 final class RepoListViewModel {
-    // Não precisa ser weak, pois referência cíclica só funciona com classes e não com structs
     private var repository: FetchListRepositoryProtocol?
-    
+    private weak var view: RepoListViewDelegate?
 }
 
 extension RepoListViewModel: RepoListViewModelDelegate {
@@ -15,11 +14,15 @@ extension RepoListViewModel: RepoListViewModelDelegate {
         self.repository = repository
     }
     
+    func set(view: RepoListViewDelegate) {
+        self.view = view
+    }
+    
     func fetchList() {
-        repository?.fetchRepoList(success: { [weak self] list in
-            
-        }, failure: { [weak self] error in
-                
+        repository?.fetchRepoList(success: { list in
+            self.view?.show(repos: list.items)
+        }, failure: { error in
+            print(error)
         })
     }
 }
