@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 protocol FetchListRepositoryProtocol {
     func fetchRepoList(page: Int, success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void)
@@ -19,14 +19,17 @@ struct FetchListRepository: FetchListRepositoryProtocol {
                 else {
                     failure(error)
                     return
-            }
+                }
             
             do {
                 let result = try JSONDecoder().decode(RepoList.self, from: data)
-                
-                success(result)
+                DispatchQueue.main.async {
+                    success(result)
+                }
             } catch let error {
-                failure(error)
+                DispatchQueue.main.async {
+                    failure(error)
+                }
             }
 
         }.resume()

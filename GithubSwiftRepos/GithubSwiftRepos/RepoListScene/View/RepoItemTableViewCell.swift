@@ -6,7 +6,7 @@ final class RepoItemTableViewCell: UITableViewCell {
         let image = UIImageView()
         image.image = #imageLiteral(resourceName: "user")
         image.contentMode = .scaleAspectFit
-        image.layer.cornerRadius = 25
+        image.layer.cornerRadius = 40
         image.layer.masksToBounds = true
         return image
     }()
@@ -53,8 +53,8 @@ extension RepoItemTableViewCell: ViewCode {
         NSLayoutConstraint.activate([
             photoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             photoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            photoImageView.widthAnchor.constraint(equalToConstant: 50),
-            photoImageView.heightAnchor.constraint(equalToConstant: 50)
+            photoImageView.widthAnchor.constraint(equalToConstant: 80),
+            photoImageView.heightAnchor.constraint(equalToConstant: 80)
         ])
         
         NSLayoutConstraint.activate([

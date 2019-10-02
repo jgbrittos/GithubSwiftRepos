@@ -17,7 +17,7 @@ extension UIImageView {
                 error == nil,
                 let image = UIImage(data: data)
                 else {
-//                    update(to: )
+                    self?.update(to: #imageLiteral(resourceName: "user"))
                     return
             }
             

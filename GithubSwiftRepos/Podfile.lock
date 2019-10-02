@@ -1,16 +1,40 @@
 PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Nimble (8.0.2)
+  - Nimble-Snapshots (4.4.0):
+    - Nimble-Snapshots/Core (= 4.4.0)
+  - Nimble-Snapshots/Core (4.4.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
+  - Quick (2.1.0)
   - UIScrollView-InfiniteScroll (1.1.0)
 
 DEPENDENCIES:
+  - Nimble (= 8.0.2)
+  - Nimble-Snapshots (= 4.4)
+  - Quick (= 2.1)
   - UIScrollView-InfiniteScroll (~> 1.1.0)
 
 SPEC REPOS:
   trunk:
+    - FBSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
     - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
 
-PODFILE CHECKSUM: 33812ae893b0a6de54b014f5160d5f0c181c74d6
+PODFILE CHECKSUM: 8fbca88165563e799ee0a3f92223f589844d9e7b
 
 COCOAPODS: 1.8.1

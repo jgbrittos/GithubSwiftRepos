@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		103656C50894EE60658B9ECF /* Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3310A5D9A06571EC31EECC19 /* Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework */; };
+		450A20B323454B560025D8A7 /* JSON+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A20B223454B560025D8A7 /* JSON+Decode.swift */; };
+		450A20B523454B7B0025D8A7 /* mock_page_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 450A20B423454B7B0025D8A7 /* mock_page_1.json */; };
 		456F3790233EC06B0047FD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F378F233EC06B0047FD18 /* AppDelegate.swift */; };
 		456F3799233EC06C0047FD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456F3798233EC06C0047FD18 /* Assets.xcassets */; };
 		456F379C233EC06C0047FD18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456F379A233EC06C0047FD18 /* LaunchScreen.storyboard */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		0F4D90E76F435E55C35FEC50 /* Pods-GithubSwiftReposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSwiftReposTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubSwiftReposTests/Pods-GithubSwiftReposTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3310A5D9A06571EC31EECC19 /* Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubSwiftRepos_GithubSwiftReposUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		450A20B223454B560025D8A7 /* JSON+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Decode.swift"; sourceTree = "<group>"; };
+		450A20B423454B7B0025D8A7 /* mock_page_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_page_1.json; sourceTree = "<group>"; };
 		456F378C233EC06B0047FD18 /* GithubSwiftRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubSwiftRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456F378F233EC06B0047FD18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		456F3798233EC06C0047FD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		450A20B623454B7E0025D8A7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				450A20B223454B560025D8A7 /* JSON+Decode.swift */,
+				450A20B423454B7B0025D8A7 /* mock_page_1.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		456F3783233EC06B0047FD18 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +168,7 @@
 		456F37A5233EC06C0047FD18 /* GithubSwiftReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				450A20B623454B7E0025D8A7 /* Mocks */,
 				456F37A6233EC06C0047FD18 /* GithubSwiftReposTests.swift */,
 				456F37A8233EC06C0047FD18 /* Info.plist */,
 			);
@@ -374,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450A20B523454B7B0025D8A7 /* mock_page_1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456F37A7233EC06C0047FD18 /* GithubSwiftReposTests.swift in Sources */,
+				450A20B323454B560025D8A7 /* JSON+Decode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

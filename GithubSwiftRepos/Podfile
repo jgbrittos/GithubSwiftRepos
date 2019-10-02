@@ -7,6 +7,9 @@ target 'GithubSwiftRepos' do
 
   # Pods for GithubSwiftRepos
   pod 'UIScrollView-InfiniteScroll', '~> 1.1.0'
+  pod 'Quick', '2.1'
+  pod 'Nimble', '8.0.2'
+  pod 'Nimble-Snapshots', '4.4'
   
   target 'GithubSwiftReposTests' do
     inherit! :search_paths

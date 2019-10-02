@@ -9,25 +9,22 @@ protocol RepoListViewDelegate: AnyObject {
 final class RepoListView: UIView {
     private weak var viewModel: RepoListViewModelDelegate?
     private var dataSource = RepoTableViewDataSource()
-    
     private var pullToRefreshCalled: Bool = false
-    private var infiniteRefreshCalled: Bool = false
     
-    private var refreshControl: UIRefreshControl {
+    private lazy var refreshControl: UIRefreshControl = {
         let control = UIRefreshControl(frame: .zero)
         control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         control.attributedTitle = NSAttributedString(string: "Fetching more repos")
         return control
-    }
+    }()
     
     private lazy var reposTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
-        table.rowHeight = UITableView.automaticDimension
-        table.estimatedRowHeight = 300
         table.register(RepoItemTableViewCell.self, forCellReuseIdentifier: "RepoItemTableViewCell")
         table.delegate = dataSource
         table.dataSource = dataSource
         table.refreshControl = refreshControl
+        table.tableFooterView = UIView(frame: .zero)
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -47,7 +44,6 @@ private extension RepoListView {
     func setupInfiniteScroll() {
         reposTableView.addInfiniteScroll { [weak self] _ in
             guard let self = self else { return }
-            self.infiniteRefreshCalled = true
             self.viewModel?.fetchNewRepos()
         }
 
@@ -71,17 +67,14 @@ extension RepoListView: RepoListViewDelegate {
     func show(repos: [Repo]) {
         if pullToRefreshCalled {
             pullToRefreshCalled = false
-            infiniteRefreshCalled = false
             dataSource.clear()
             reposTableView.refreshControl?.endRefreshing()
         }
-
-        DispatchQueue.main.async {
-            self.dataSource.set(repos)
-            self.reposTableView.reloadData()
-            self.reposTableView.finishInfiniteScroll()
-            self.reposTableView.isHidden = false
-        }
+        
+        self.dataSource.set(repos)
+        self.reposTableView.reloadData()
+        self.reposTableView.finishInfiniteScroll()
+        self.reposTableView.isHidden = false
     }
 }
 
