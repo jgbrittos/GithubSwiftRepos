@@ -10,7 +10,6 @@ final class RepoItemTableViewCell: UITableViewCell {
         image.layer.masksToBounds = true
         return image
     }()
-    
     private let repoNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
@@ -18,7 +17,6 @@ final class RepoItemTableViewCell: UITableViewCell {
     }()
     private let authorNameLabel = UILabel()
     private let starsLabel = UILabel()
-    
     private lazy var stackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [repoNameLabel, authorNameLabel, starsLabel])
         stack.axis = .vertical

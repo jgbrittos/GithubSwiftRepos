@@ -17,7 +17,6 @@ final class RepoListView: UIView {
         control.attributedTitle = NSAttributedString(string: "Fetching more repos")
         return control
     }()
-    
     private lazy var reposTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.register(RepoItemTableViewCell.self, forCellReuseIdentifier: "RepoItemTableViewCell")
@@ -35,8 +34,25 @@ final class RepoListView: UIView {
         setupInfiniteScroll()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init?(coder:) has not been implemented!")
+    required init?(coder aDecoder: NSCoder) { return nil }
+}
+
+extension RepoListView: RepoListViewDelegate {
+    func set(viewModel: RepoListViewModelDelegate) {
+        self.viewModel = viewModel
+    }
+    
+    func show(repos: [Repo]) {
+        if pullToRefreshCalled {
+            pullToRefreshCalled = false
+            dataSource.clear()
+            reposTableView.refreshControl?.endRefreshing()
+        }
+        
+        self.dataSource.set(repos)
+        self.reposTableView.reloadData()
+        self.reposTableView.finishInfiniteScroll()
+        self.reposTableView.isHidden = false
     }
 }
 
@@ -56,25 +72,6 @@ private extension RepoListView {
     func pullToRefresh() {
         viewModel?.fetchList()
         pullToRefreshCalled = true
-    }
-}
-
-extension RepoListView: RepoListViewDelegate {
-    func set(viewModel: RepoListViewModelDelegate) {
-        self.viewModel = viewModel
-    }
-    
-    func show(repos: [Repo]) {
-        if pullToRefreshCalled {
-            pullToRefreshCalled = false
-            dataSource.clear()
-            reposTableView.refreshControl?.endRefreshing()
-        }
-        
-        self.dataSource.set(repos)
-        self.reposTableView.reloadData()
-        self.reposTableView.finishInfiniteScroll()
-        self.reposTableView.isHidden = false
     }
 }
 

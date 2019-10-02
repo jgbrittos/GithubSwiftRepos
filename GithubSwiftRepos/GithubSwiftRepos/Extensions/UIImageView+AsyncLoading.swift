@@ -27,7 +27,7 @@ extension UIImageView {
     }
     
     private func update(to image: UIImage) {
-        DispatchQueue.main.async() {
+        DispatchQueue.main.async {
             self.image = image
         }
     }
