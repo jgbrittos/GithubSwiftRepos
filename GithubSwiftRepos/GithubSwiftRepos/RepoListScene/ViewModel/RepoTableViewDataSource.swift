@@ -5,7 +5,7 @@ final class RepoTableViewDataSource: NSObject {
     private(set) var repoList: [Repo] = []
     
     func set(_ list: [Repo]) {
-        self.repoList = list
+        self.repoList.append(contentsOf: list)
     }
     
     func clear() {

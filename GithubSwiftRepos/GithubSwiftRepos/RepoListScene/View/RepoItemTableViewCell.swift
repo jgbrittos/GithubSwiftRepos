@@ -10,13 +10,20 @@ final class RepoItemTableViewCell: UITableViewCell {
         image.layer.masksToBounds = true
         return image
     }()
-    private let repoNameLabel = UILabel()
+    
+    private let repoNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        return label
+    }()
     private let authorNameLabel = UILabel()
     private let starsLabel = UILabel()
+    
     private lazy var stackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [repoNameLabel, authorNameLabel, starsLabel])
         stack.axis = .vertical
-//        stack.spacing = 5
+        stack.spacing = 5
+        stack.distribution = .fillEqually
         return stack
     }()
     
@@ -51,10 +58,10 @@ extension RepoItemTableViewCell: ViewCode {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20),
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 20)
+            stackView.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 20),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
     }
     

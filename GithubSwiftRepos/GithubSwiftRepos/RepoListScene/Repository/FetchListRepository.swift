@@ -1,15 +1,15 @@
 import UIKit
 
 protocol FetchListRepositoryProtocol {
-    func fetchRepoList(success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void)
+    func fetchRepoList(page: Int, success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void)
 }
 
 struct FetchListRepository: FetchListRepositoryProtocol {
     private let endpoint = "https://api.github.com/search/repositories?q=language:swift&sort=stars"
     
-    func fetchRepoList(success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void) {
-        guard let url = URL(string: endpoint) else { return }
-        
+    func fetchRepoList(page: Int = 1, success: @escaping (RepoList) -> Void, failure: @escaping (Error?) -> Void) {
+        guard let url = URL(string: endpoint + "&page=\(page)") else { return }
+
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse,
@@ -23,6 +23,7 @@ struct FetchListRepository: FetchListRepositoryProtocol {
             
             do {
                 let result = try JSONDecoder().decode(RepoList.self, from: data)
+                
                 success(result)
             } catch let error {
                 failure(error)
