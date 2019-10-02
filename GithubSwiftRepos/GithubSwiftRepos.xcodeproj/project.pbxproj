@@ -26,6 +26,7 @@
 		456F38162342C3350047FD18 /* FetchListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F38152342C3350047FD18 /* FetchListRepository.swift */; };
 		456F38182342C6C90047FD18 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F38172342C6C90047FD18 /* RepoListViewModel.swift */; };
 		45819EC32342CDD4002A7F13 /* RepoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45819EC22342CDD4002A7F13 /* RepoTableViewDataSource.swift */; };
+		45D98BA123455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D98BA023455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift */; };
 		52899DE6F8CF7AAE2757D312 /* Pods_GithubSwiftRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96FA312B805571DCE2DA3F6 /* Pods_GithubSwiftRepos.framework */; };
 		B1D15F0D140E720C9DFD16B8 /* Pods_GithubSwiftReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9D7AD6EEE51A8423CCFC0 /* Pods_GithubSwiftReposTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		456F38152342C3350047FD18 /* FetchListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListRepository.swift; sourceTree = "<group>"; };
 		456F38172342C6C90047FD18 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		45819EC22342CDD4002A7F13 /* RepoTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewDataSource.swift; sourceTree = "<group>"; };
+		45D98BA023455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSwiftRepoSnapshotTests.swift; sourceTree = "<group>"; };
 		56B30DE8147589CD56462E03 /* Pods-GithubSwiftRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSwiftRepos.release.xcconfig"; path = "Target Support Files/Pods-GithubSwiftRepos/Pods-GithubSwiftRepos.release.xcconfig"; sourceTree = "<group>"; };
 		80C9D7AD6EEE51A8423CCFC0 /* Pods_GithubSwiftReposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubSwiftReposTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3416CD0D0F1F80A2043F475 /* Pods-GithubSwiftRepos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSwiftRepos.debug.xcconfig"; path = "Target Support Files/Pods-GithubSwiftRepos/Pods-GithubSwiftRepos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				450A20B623454B7E0025D8A7 /* Mocks */,
 				456F37A6233EC06C0047FD18 /* GithubSwiftReposTests.swift */,
 				456F37A8233EC06C0047FD18 /* Info.plist */,
+				45D98BA023455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift */,
 			);
 			path = GithubSwiftReposTests;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456F37A7233EC06C0047FD18 /* GithubSwiftReposTests.swift in Sources */,
+				45D98BA123455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift in Sources */,
 				450A20B323454B560025D8A7 /* JSON+Decode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
