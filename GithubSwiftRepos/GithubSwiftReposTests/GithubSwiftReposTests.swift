@@ -47,7 +47,7 @@ class GithubSwiftReposTests: QuickSpec {
                 }
                 
                 it("should show repos on view") {
-                    expect(self.mockView.showReposWasCalled).to(beTrue())
+                    expect(self.mockView.refreshListWasCalled).to(beTrue())
                     expect(self.mockView.repos).notTo(beNil())
                 }
             }
@@ -62,13 +62,13 @@ class GithubSwiftReposTests: QuickSpec {
                     expect(self.mockRepository.fetchRepoListWasCalled).to(beTrue())
                 }
                 
-                it("should show 4 repos on view") {
+                it("should show 8 repos on view") {
                     expect(self.mockView.repos).to(haveCount(8))
                 }
                     
-                it("should show new repos on view after infinite scroll") {
+                it("should show 8 new repos on view after infinite scroll") {
                     self.sut.fetchNewRepos()
-                    expect(self.mockView.repos).to(haveCount(8))
+                    expect(self.mockView.repos).to(haveCount(16))
                 }
             }
             
@@ -83,7 +83,7 @@ class GithubSwiftReposTests: QuickSpec {
                 }
                 
                 it("should not have any repo to show") {
-                    expect(self.mockView.repos).to(beNil())
+                    expect(self.mockView.repos).to(beEmpty())
                 }
             }
         }
@@ -93,7 +93,8 @@ class GithubSwiftReposTests: QuickSpec {
 private class MockView: RepoListViewDelegate {
     var setViewModelWasCalled = false
     var showReposWasCalled = false
-    var repos: [Repo]?
+    var refreshListWasCalled = false
+    var repos: [Repo] = []
     
     func set(viewModel: RepoListViewModelDelegate) {
         setViewModelWasCalled = true
@@ -101,6 +102,11 @@ private class MockView: RepoListViewDelegate {
     
     func show(repos: [Repo]) {
         showReposWasCalled = true
+        self.repos.append(contentsOf: repos)
+    }
+    
+    func refreshList(with repos: [Repo]) {
+        refreshListWasCalled = true
         self.repos = repos
     }
 }

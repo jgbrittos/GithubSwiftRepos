@@ -27,13 +27,14 @@ extension RepoListViewModel: RepoListViewModelDelegate {
         self.page = 2
 
         repository?.fetchRepoList(page: 1, success: { [weak view = self.view] list in
-            view?.show(repos: list.items)
+            view?.refreshList(with: list.items)
         }, failure: { _ in })
     }
     
     func fetchNewRepos() {
-        repository?.fetchRepoList(page: page, success: { [weak view = self.view] list in
-            view?.show(repos: list.items)
+        repository?.fetchRepoList(page: page, success: { [weak self] list in
+            guard let self = self else { return }
+            self.view?.show(repos: list.items)
             self.page += 1
         }, failure: { _ in })
     }

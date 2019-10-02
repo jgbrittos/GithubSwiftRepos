@@ -4,13 +4,13 @@ import UIScrollView_InfiniteScroll
 protocol RepoListViewDelegate: AnyObject {
     func set(viewModel: RepoListViewModelDelegate)
     func show(repos: [Repo])
+    func refreshList(with repos: [Repo])
 }
 
 final class RepoListView: UIView {
     private weak var viewModel: RepoListViewModelDelegate?
     private var dataSource = RepoTableViewDataSource()
-    private var pullToRefreshCalled: Bool = false
-    
+
     private lazy var refreshControl: UIRefreshControl = {
         let control = UIRefreshControl(frame: .zero)
         control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
@@ -43,16 +43,15 @@ extension RepoListView: RepoListViewDelegate {
     }
     
     func show(repos: [Repo]) {
-        if pullToRefreshCalled {
-            pullToRefreshCalled = false
-            dataSource.clear()
-            reposTableView.refreshControl?.endRefreshing()
-        }
-        
         self.dataSource.set(repos)
         self.reposTableView.reloadData()
         self.reposTableView.finishInfiniteScroll()
-        self.reposTableView.isHidden = false
+    }
+    
+    func refreshList(with repos: [Repo]) {
+        dataSource.clear()
+        reposTableView.refreshControl?.endRefreshing()
+        show(repos: repos)
     }
 }
 
@@ -71,7 +70,6 @@ private extension RepoListView {
     @objc
     func pullToRefresh() {
         viewModel?.fetchList()
-        pullToRefreshCalled = true
     }
 }
 
@@ -87,9 +85,5 @@ extension RepoListView: ViewCode {
             reposTableView.topAnchor.constraint(equalTo: topAnchor),
             reposTableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    func finalSetup() {
-        backgroundColor = .white
     }
 }

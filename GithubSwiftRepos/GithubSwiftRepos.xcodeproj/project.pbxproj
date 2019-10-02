@@ -150,8 +150,8 @@
 			children = (
 				450A20B623454B7E0025D8A7 /* Mocks */,
 				456F37A6233EC06C0047FD18 /* GithubSwiftReposTests.swift */,
-				456F37A8233EC06C0047FD18 /* Info.plist */,
 				45D98BA023455D12007FBE47 /* GithubSwiftRepoSnapshotTests.swift */,
+				456F37A8233EC06C0047FD18 /* Info.plist */,
 			);
 			path = GithubSwiftReposTests;
 			sourceTree = "<group>";
